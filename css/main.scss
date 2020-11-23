@@ -1,0 +1,281 @@
+//IMPORTS
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+//IMPORTS END
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes zigzag {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(90px);
+    }
+
+    50% {
+        transform: translateY(-90px);
+    }
+
+    75% {
+        transform: translateY(90px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+
+
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #666;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    display: none;
+}
+
+* {
+    // margin: 0;
+    // padding: 0;
+    // box-sizing: border-box;
+    font-family: 'Montserrat',
+        sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+main {
+    position: relative;
+
+    .top-btn {
+        background: #333;
+        position: absolute;
+        bottom: 10px;
+        margin: 0 50%;
+        border-radius: 50%;
+
+        &:hover {
+            background: rgb(23, 85, 126);
+        }
+
+    }
+}
+
+.container-fluid {
+    padding: 0;
+
+}
+
+.navbar {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .navbar-brand {
+        padding-right: 50px;
+        border-right: 1px solid #333;
+        text-transform: uppercase;
+
+        img {
+            width: 40px;
+        }
+    }
+
+    .navbar-nav {
+        padding-left: 150px;
+    }
+
+    .btn-outline-rounded {
+        border: 1px solid #333;
+        border-radius: 50%;
+        color: #333;
+    }
+}
+
+.banner {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #6969b3, #4b244a) fixed;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px #333;
+
+    .btn {
+        box-shadow: 1px 1px 3px rgb(0, 0, 0);
+
+        &:hover {
+            background: transparent;
+            color: #fff;
+        }
+    }
+
+    hr {
+        height: 3.5px;
+        width: 400px;
+    }
+
+    .slogan {
+        letter-spacing: 2px;
+    }
+
+    .social {
+        z-index: 5;
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        right: 50%;
+        transform: translateX(50%);
+
+        .btn {
+            margin: 10px;
+            border-radius: 50%;
+            box-shadow: inset 1px 1px 3px rgb(0, 0, 0);
+            transform: rotate(0);
+            transition: transform 1s;
+            transform: scale(1);
+
+            &:hover {
+                transform: rotate(360deg);
+                transform: scale(1.4);
+
+            }
+        }
+    }
+
+    .me {
+        width: 1020px;
+        position: absolute;
+        top: 200px;
+        right: 50px;
+        animation: zoom 5000ms infinite ease-in-out;
+        z-index: 1;
+    }
+
+    .wave {
+        animation: zigzag 45000ms infinite ease-in-out;
+        position: absolute;
+        opacity: 0.1;
+        width: 75%;
+        top: 10px;
+        left: -200px;
+        // transform: rotate(90deg);
+        z-index: 0;
+
+    }
+
+
+    .textBanner {
+        // text-transform: uppercase;
+        z-index: 99;
+
+        h1 {
+            font-size: 5.5rem;
+            font-family: 'Indie Flower',
+                cursive;
+        }
+    }
+}
+
+.sect {
+    width: 100%;
+    height: 100vh;
+    padding-top: 15%;
+}
+
+#about {
+    background: #98c1d9;
+
+
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .presentation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column
+    }
+
+    .photo {
+        img {
+            margin: 20px;
+            width: 98%;
+        }
+    }
+
+}
+
+#skills {
+    background: linear-gradient(#98c1d9, #6969b3);
+
+}
+
+#portfolio {
+    background: linear-gradient(#6969b3, #533a7b);
+
+}
+
+#prices {
+    background: linear-gradient(#533a7b, #4cadb4);
+
+    .container {
+        background: rgb(222, 230, 211);
+        padding: 100px;
+        border: 1px solid #333;
+        border-radius: 15px;
+        box-shadow: 1px 1px 3px rgb(0, 0, 0);
+
+    }
+
+}
+
+#contact {
+    background: #4cadb4;
+
+}
